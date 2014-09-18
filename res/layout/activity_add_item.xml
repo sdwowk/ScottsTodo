@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.scottstodolist.AddItemActivity" >
+
+    <TextView
+        android:id="@+id/AddTitleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/title_"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/AddTitleText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/AddTitleTextView"
+        android:ems="10"
+        android:hint="@string/add_title_here" />
+
+    <TextView
+        android:id="@+id/AddDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AddTitleText"
+        android:layout_below="@+id/AddTitleText"
+        android:layout_marginTop="21dp"
+        android:text="@string/date_"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/AddDateText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/AddDateTextView"
+        android:ems="10"
+        android:hint="@string/m_d_yyyy"
+        android:inputType="date" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/NotesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AddDateText"
+        android:layout_below="@+id/AddDateText"
+        android:layout_marginTop="67dp"
+        android:text="@string/notes_"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/NotesText"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/AddToDoItemButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/NotesTextView"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/AddToDoItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/add" />
+
+</RelativeLayout>
