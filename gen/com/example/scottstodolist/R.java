@@ -22,7 +22,8 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int ic_action_new=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
         public static final int AddDateText=0x7f080003;
@@ -32,7 +33,9 @@ public final class R {
         public static final int AddToDoItemButton=0x7f080006;
         public static final int NotesText=0x7f080005;
         public static final int NotesTextView=0x7f080004;
+        public static final int action_add=0x7f080009;
         public static final int action_settings=0x7f080008;
+        public static final int emailItems=0x7f08000a;
         public static final int listOfToDoView=0x7f080007;
     }
     public static final class layout {
@@ -44,15 +47,17 @@ public final class R {
         public static final int main=0x7f070001;
     }
     public static final class string {
+        public static final int action_add=0x7f05000b;
         public static final int action_settings=0x7f050002;
         public static final int add=0x7f05000a;
         public static final int add_title_here=0x7f050006;
         public static final int app_name=0x7f050000;
         public static final int date_=0x7f050007;
+        public static final int email_items=0x7f05000c;
         public static final int hello_world=0x7f050001;
         public static final int m_d_yyyy=0x7f050008;
         public static final int notes_=0x7f050009;
-        public static final int title_=0x7f050004;
+        public static final int title=0x7f050004;
         public static final int title_=0x7f050005;
         public static final int title_activity_add_item=0x7f050003;
     }
