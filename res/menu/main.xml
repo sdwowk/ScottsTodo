@@ -7,10 +7,15 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
-    
- <item android:id="@+id/action_add"
-          android:icon="@drawable/ic_action_new"
-          android:title="@string/action_add"
-          android:showAsAction= "ifRoom"  />
- <item android:id="@+id/emailItems" android:title="@string/email_items"></item>
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_action_new"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_add"/>
+    <item
+        android:id="@+id/emailItems"
+        android:title="@string/email_items"
+        android:onClick="addToDoItem">
+    </item>
+
 </menu>
