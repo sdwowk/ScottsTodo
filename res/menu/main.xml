@@ -12,7 +12,7 @@
         android:icon="@drawable/ic_action_new"
         android:showAsAction="ifRoom"
         android:title="@string/action_add"
-        android:onClick="addToDoLayout"/>
+        android:onClick="addToDoItem"/>
     <item
         android:id="@+id/emailItems"
         android:title="@string/email_items">

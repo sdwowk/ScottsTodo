@@ -15,4 +15,7 @@ public class ToDoListController {
 		}
 		return toDoList;
 	}
+	public void addingToDoItem(ToDoItem item){
+		getToDoList().addToDo(item);
+	}
 }

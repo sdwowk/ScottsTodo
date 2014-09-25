@@ -33,8 +33,21 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void addToDoLayout(MenuItem select){
-		Intent intent = new Intent(MainActivity.this, AddLayoutActivity.class);
-		startActivity(intent);
+	public void addToDoItem(MenuItem select){
+		
+		 
+		Intent intent = new Intent(MainActivity.this, AddToDoItemActivity.class);
+		startActivityForResult(intent,RESULT_FIRST_USER);
+		
 	}
+	
+	protected void onActivityResult (int requestCode, int resultCode, Intent intent){
+		ToDoListController listController = new ToDoListController();
+		ToDoItem item = (ToDoItem) intent.getExtras().getSerializable("AddingToDo item");
+		
+		listController.addingToDoItem(item);
+		
+	}
+	
+	
 }

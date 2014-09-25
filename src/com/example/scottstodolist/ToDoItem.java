@@ -1,7 +1,13 @@
 package com.example.scottstodolist;
 
-public class ToDoItem {
+import java.io.Serializable;
+
+public class ToDoItem implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String title = "";
 	private String dueDate = "";
 	private String notes = "";

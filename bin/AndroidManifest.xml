@@ -23,8 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddLayoutActivity"
-            android:label="@string/title_activity_add_item" >
+            android:name=".AddToDoItemActivity"
+            android:label="@string/title_activity_add_to_do_item" >
         </activity>
     </application>
 
