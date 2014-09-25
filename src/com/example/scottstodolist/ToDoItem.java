@@ -4,15 +4,18 @@ public class ToDoItem {
 	
 	private String title = "";
 	private String dueDate = "";
+	private String notes = "";
 
-	public ToDoItem(String title, String dueDate) {
+	public ToDoItem(String title, String dueDate, String notes) {
 		super();
-		this.title = title;
-		this.dueDate = dueDate;
+		this.setTitle(title);
+		this.setDueDate(dueDate);
+		this.setNotes(notes);
 	}
 	
-	public ToDoItem(String title){
+	public ToDoItem(String title, String date){
 		this.title = title;
+		this.dueDate = date;
 	}
 	public ToDoItem(){
 		
@@ -32,6 +35,14 @@ public class ToDoItem {
 	
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
 	}
 	
 }

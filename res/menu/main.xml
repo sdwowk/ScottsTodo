@@ -11,11 +11,11 @@
         android:id="@+id/action_add"
         android:icon="@drawable/ic_action_new"
         android:showAsAction="ifRoom"
-        android:title="@string/action_add"/>
+        android:title="@string/action_add"
+        android:onClick="addToDoLayout"/>
     <item
         android:id="@+id/emailItems"
-        android:title="@string/email_items"
-        android:onClick="addToDoItem">
+        android:title="@string/email_items">
     </item>
 
 </menu>

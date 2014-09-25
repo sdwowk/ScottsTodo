@@ -33,8 +33,8 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	public void addToDoItem(MenuItem select){
-		Intent intent = new Intent(MainActivity.this, AddItemActivity.class);
+	public void addToDoLayout(MenuItem select){
+		Intent intent = new Intent(MainActivity.this, AddLayoutActivity.class);
 		startActivity(intent);
 	}
 }

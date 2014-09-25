@@ -39,12 +39,14 @@ public final class R {
         public static final int listOfToDoView=0x7f080007;
     }
     public static final class layout {
-        public static final int activity_add_item=0x7f030000;
-        public static final int activity_main=0x7f030001;
+        public static final int activity_add_layout=0x7f030000;
+        public static final int activity_add_to_do_item=0x7f030001;
+        public static final int activity_main=0x7f030002;
     }
     public static final class menu {
         public static final int add_item=0x7f070000;
-        public static final int main=0x7f070001;
+        public static final int add_to_do_item=0x7f070001;
+        public static final int main=0x7f070002;
     }
     public static final class string {
         public static final int action_add=0x7f05000b;
@@ -60,6 +62,7 @@ public final class R {
         public static final int title=0x7f050004;
         public static final int title_=0x7f050005;
         public static final int title_activity_add_item=0x7f050003;
+        public static final int title_activity_add_to_do_item=0x7f05000d;
     }
     public static final class style {
         public static final int AddTitleHint=0x7f060002;

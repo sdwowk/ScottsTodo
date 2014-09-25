@@ -14,5 +14,6 @@
     <string name="add">Add</string>
     <string name="action_add">Add</string>
     <string name="email_items">Email Items</string>
+    <string name="title_activity_add_to_do_item">AddToDoItemActivity</string>
 
 </resources>

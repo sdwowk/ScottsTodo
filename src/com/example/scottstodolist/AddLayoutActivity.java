@@ -1,16 +1,19 @@
 package com.example.scottstodolist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
-public class AddItemActivity extends Activity {
+public class AddLayoutActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_add_item);
+		setContentView(R.layout.activity_add_layout);
 	}
 
 	@Override
@@ -30,5 +33,12 @@ public class AddItemActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public void addToDoItem(View v){
+		EditText title = (EditText) findViewById(R.id.AddTitleText);
+		Intent intent = new Intent(AddLayoutActivity.this, AddToDoItemActivity.class);
+		this.startActivityForResult(intent,RESULT_FIRST_USER );
+	
 	}
 }
