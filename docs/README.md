@@ -1,5 +1,7 @@
 ScottsTodo
+An app that allows you to add to do items to a list
 ==========
+Attributions
 Used Student Picker for as a guideline to build my project. Some code was copied.
 
 Student Picker: Randomly pick students to answer questions
