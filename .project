@@ -30,11 +30,4 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>docs/301UMLDiagram</name>
-			<type>1</type>
-			<location>C:/Users/Scott/Documents/UML Assign 1 301.pdf</location>
-		</link>
-	</linkedResources>
 </projectDescription>
