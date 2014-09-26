@@ -32,8 +32,10 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		//Initiate the list manager and the array adapter
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
 		ToDoListManager.initManager(this.getApplicationContext());
 		ListView checkboxView = (ListView) findViewById(R.id.listOfToDoView);
 		final ArrayList<ToDoItem> checkboxList =  ToDoListController.getToDoList().getList();
@@ -61,7 +63,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void addToDoItem(MenuItem select){
-		
+		//Starts an intent to that asks for a result from the next activity.
 		 
 		Intent intent = new Intent(MainActivity.this, AddToDoItemActivity.class);
 		startActivityForResult(intent,RESULT_FIRST_USER);
@@ -69,7 +71,8 @@ public class MainActivity extends Activity {
 	}
 	
 	protected void onActivityResult (int requestCode, int resultCode, Intent data){
-
+		//What gets called after the user selects the add button in AddToDoItemActivity
+		//updates the list and shows the newly added item on the home screen
 		ToDoListController listController = new ToDoListController();
 		ToDoItem item = (ToDoItem) data.getSerializableExtra("AddingToDoItem");
 		
