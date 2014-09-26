@@ -20,4 +20,14 @@
 
     </ListView>
 
+    <CheckBox
+        android:id="@+id/checkBox_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/listOfToDoView"
+        android:layout_alignTop="@+id/listOfToDoView"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/_quot_quot_" />
+
 </RelativeLayout>

@@ -33,9 +33,10 @@ public final class R {
         public static final int AddToDoItemButton=0x7f080006;
         public static final int NotesText=0x7f080005;
         public static final int NotesTextView=0x7f080004;
-        public static final int action_add=0x7f08000a;
-        public static final int action_settings=0x7f080008;
-        public static final int emailItems=0x7f080009;
+        public static final int action_add=0x7f08000b;
+        public static final int action_settings=0x7f080009;
+        public static final int checkBox_id=0x7f080008;
+        public static final int emailItems=0x7f08000a;
         public static final int listOfToDoView=0x7f080007;
     }
     public static final class layout {
@@ -48,6 +49,7 @@ public final class R {
         public static final int main=0x7f070002;
     }
     public static final class string {
+        public static final int _quot_quot_=0x7f05000f;
         public static final int action_add=0x7f05000b;
         public static final int action_settings=0x7f050002;
         public static final int add=0x7f05000a;

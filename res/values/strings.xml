@@ -16,5 +16,6 @@
     <string name="email_items">Email Items</string>
     <string name="title_activity_add_to_do_item">AddToDoItemActivity</string>
     <string name="you_currently_have_no_to_do_items_">You currently have no to do items.</string>
+    <string name="_quot_quot_"></string>
 
 </resources>

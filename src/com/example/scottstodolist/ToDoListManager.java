@@ -15,7 +15,24 @@ import android.util.Base64;
 public class ToDoListManager {
 	static final String savfile = "ToDoList";
 	static final String listKey = "toDoList";
-	Context context;
+	static Context context;
+	static private ToDoListManager toDoListManager = null;
+	
+	public static void initManager(Context context){
+		if(toDoListManager == null){
+			if(context == null){
+				throw new RuntimeException("Manager not initialized");
+			}
+			toDoListManager = new ToDoListManager(context);
+		}
+	}
+	
+	public static ToDoListManager getManager(){
+		if(toDoListManager == null){
+			toDoListManager = new ToDoListManager(context);
+		}
+		return toDoListManager; 
+	}
 	public ToDoListManager(Context c){
 		context = c;
 	}

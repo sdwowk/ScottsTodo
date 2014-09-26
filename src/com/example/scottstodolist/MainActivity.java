@@ -17,6 +17,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ToDoListManager.initManager(this.getApplicationContext());
 		ListView checkboxView = (ListView) findViewById(R.id.listOfToDoView);
 		final ArrayList<ToDoItem> checkboxList =  ToDoListController.getToDoList().getList();
 		final ArrayAdapter<ToDoItem> arrayToCheckbox = new ArrayAdapter<ToDoItem>(this, android.R.layout.simple_list_item_1, checkboxList);
@@ -56,7 +57,19 @@ public class MainActivity extends Activity {
 		ToDoItem item = (ToDoItem) data.getSerializableExtra("AddingToDoItem");
 		
 		listController.addToDoItem(item);
-
+		ListView checkboxView = (ListView) findViewById(R.id.listOfToDoView);
+		final ArrayList<ToDoItem> checkboxList =  ToDoListController.getToDoList().getList();
+		final ArrayAdapter<ToDoItem> arrayToCheckbox = new ArrayAdapter<ToDoItem>(this, android.R.layout.simple_list_item_1, checkboxList);
+		checkboxView.setAdapter(arrayToCheckbox);
+		ToDoListController.getToDoList().addListener(new Listener() {			
+			@Override
+			public void update() {
+				checkboxList.clear();
+				ArrayList<ToDoItem> items = ToDoListController.getToDoList().getList();
+				checkboxList.addAll(items);
+				arrayToCheckbox.notifyDataSetChanged();
+			}
+		});
 	}
 	
 	

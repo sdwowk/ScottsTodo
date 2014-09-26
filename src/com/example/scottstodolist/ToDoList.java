@@ -1,5 +1,6 @@
 package com.example.scottstodolist;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -9,10 +10,17 @@ public class ToDoList implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	protected ArrayList<ToDoItem> toDoList = null;
-	protected ArrayList<Listener> listeners;
+	protected transient ArrayList<Listener> listeners = null;
 	public ToDoList() {
 		toDoList = new ArrayList<ToDoItem>();		
 		listeners = new ArrayList<Listener>();
+	}
+	
+	private ArrayList<Listener> getListeners(){
+		if(listeners == null){
+			listeners = new ArrayList<Listener>();
+		}
+		return listeners;
 	}
 	
 	public void addToDo(ToDoItem todo){
@@ -21,20 +29,21 @@ public class ToDoList implements Serializable{
 	}
 
 	private void notifyChanges() {
-		for(Listener listener : listeners){
+		for(Listener listener : getListeners()){
 			listener.update();
 		}
 		
 	}
 
+	
 	public ArrayList<ToDoItem> getList() {
 		
 		return toDoList;
 	}
 	public void addListener(Listener listen){
-		listeners.add(listen);
+		getListeners().add(listen);
 	}
 	public void removeListener(Listener listen){
-		listeners.remove(listen);
+		getListeners().remove(listen);
 	}
 }
