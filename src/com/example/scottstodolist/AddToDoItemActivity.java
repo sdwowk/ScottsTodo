@@ -52,7 +52,7 @@ public class AddToDoItemActivity extends Activity {
 		
 			Intent returnIntent = new Intent();
 			returnIntent.putExtra("AddingToDoItem", addItem);
-			setResult(MainActivity.RESULT_OK, returnIntent);
+			setResult(Activity.RESULT_OK, returnIntent);
 			finish();
 		}
 	}

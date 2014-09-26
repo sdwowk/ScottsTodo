@@ -51,4 +51,9 @@ public class ToDoItem implements Serializable{
 		this.notes = notes;
 	}
 	
+	public String toString(){
+		String wantedOutput = getTitle() + " , " + getDueDate();
+		return wantedOutput;
+	}
+	
 }

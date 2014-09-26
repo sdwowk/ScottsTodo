@@ -1,10 +1,15 @@
 package com.example.scottstodolist;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -12,6 +17,10 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ListView checkboxView = (ListView) findViewById(R.id.listOfToDoView);
+		final ArrayList<ToDoItem> checkboxList =  ToDoListController.getToDoList().getList();
+		final ArrayAdapter<ToDoItem> arrayToCheckbox = new ArrayAdapter<ToDoItem>(this, android.R.layout.simple_list_item_1, checkboxList);
+		checkboxView.setAdapter(arrayToCheckbox);
 	}
 
 	@Override
@@ -41,12 +50,13 @@ public class MainActivity extends Activity {
 		
 	}
 	
-	protected void onActivityResult (int requestCode, int resultCode, Intent intent){
+	protected void onActivityResult (int requestCode, int resultCode, Intent data){
+
 		ToDoListController listController = new ToDoListController();
-		ToDoItem item = (ToDoItem) intent.getExtras().getSerializable("AddingToDo item");
+		ToDoItem item = (ToDoItem) data.getSerializableExtra("AddingToDoItem");
 		
-		listController.addingToDoItem(item);
-		
+		listController.addToDoItem(item);
+
 	}
 	
 	

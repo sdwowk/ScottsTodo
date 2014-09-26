@@ -62,6 +62,7 @@ public final class R {
         public static final int title_=0x7f050005;
         public static final int title_activity_add_item=0x7f050003;
         public static final int title_activity_add_to_do_item=0x7f05000d;
+        public static final int you_currently_have_no_to_do_items_=0x7f05000e;
     }
     public static final class style {
         public static final int AddTitleHint=0x7f060002;
